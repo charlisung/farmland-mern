@@ -1,5 +1,6 @@
 import useFetch from "../useFetch";
 import { Link } from "react-router-dom";
+import Add from "./Add";
 
 const List = () => {
   const {
@@ -12,13 +13,20 @@ const List = () => {
     <>
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
+
       {products &&
         products.map((product) => {
           return (
-            <ul key={product._id}>
-              <Link to={`/products/${product._id}`}>
-                {product.name} - {product.price}
-              </Link>
+            <ul key={product._id} className="list">
+              <li>
+                <Link to={`/products/${product._id}`}>
+                  {product.name}(${product.price}){" "}
+                </Link>
+                -{" "}
+                <Link to={`/products/category/${product.category}`}>
+                  <small>{product.category}</small>
+                </Link>
+              </li>
             </ul>
           );
         })}

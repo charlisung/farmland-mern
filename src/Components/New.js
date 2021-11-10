@@ -49,7 +49,7 @@ const New = () => {
         <option value="vegetable">Vegetable</option>
         <option value="dairy">Dairy</option>
       </select>
-      <button>submit</button>
+      <button>Save</button>
     </form>
   );
 };

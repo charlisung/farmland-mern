@@ -3,38 +3,40 @@ import List from "./Components/List";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Detail from "./Components/Detail";
 import New from "./Components/New";
-import Navbar from "./Components/Navbar";
 import Edit from "./Components/Edit";
 import NotFound from "./Components/NotFound";
+import Add from "./Components/Add";
+import Category from "./Components/Category";
 
 function App() {
   return (
-    <Router>
-      <div>
-        <div className="nav">
-          <h1>Farm Stand</h1>
-          <Navbar />
-        </div>
-
+    <div className="container">
+      <h1>Charli's Farm</h1>
+      <Router>
         <Switch>
           <Route exact path="/">
             <List />
           </Route>
-          <Route exact path="/products/new">
+          <Route path="/products/new">
             <New />
           </Route>
-          <Route exact path="/products/:id">
-            <Detail />
+          <Route path="/products/category/:id">
+            <Category />
           </Route>
-          <Route exact path="/products/:id/edit">
+          <Route path="/products/:id/edit">
             <Edit />
           </Route>
+          <Route path="/products/:id">
+            <Detail />
+          </Route>
+
           <Route path="*">
             <NotFound />
           </Route>
         </Switch>
-      </div>
-    </Router>
+        <Add />
+      </Router>
+    </div>
   );
 }
 

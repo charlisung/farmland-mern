@@ -25,12 +25,14 @@ const Detail = () => {
       {error && <div>{error}</div>}
       {isPending && <div>Loading...</div>}
       {data && (
-        <div>
-          <h2>{data.name}</h2>
-          <p>{data.price}</p>
-          <p>{data.category}</p>
-          <Link to={`${data._id}/edit`}>Edit</Link>
-
+        <div className="detail">
+          <p>Produce: {data.name}</p>
+          <p>Price: {data.price}</p>
+          <p>Category: {data.category}</p>{" "}
+          <Link to={`${data._id}/edit`}>
+            {" "}
+            <button>Edit </button>
+          </Link>
           <button
             onClick={() => {
               handleClick(data._id);
@@ -40,7 +42,6 @@ const Detail = () => {
           </button>
         </div>
       )}
-      <Link to="/">Homepage</Link>
     </div>
   );
 };

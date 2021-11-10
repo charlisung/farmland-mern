@@ -39,41 +39,38 @@ const Edit = () => {
       });
   };
   return (
-    <div>
-      <h1>Edit</h1>
-      <form onSubmit={updateProduct}>
-        <lable htmlFor="name">Product name:</lable>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          value={product}
-          placeholder="product name"
-          onChange={(e) => setProduct(e.target.value)}
-        />
-        <lable htmlFor="price">Unit price:</lable>
-        <input
-          type="number"
-          name="price"
-          id="name"
-          value={price}
-          placeholder="product price"
-          onChange={(e) => setPrice(e.target.value)}
-        />
-        <label htmlFor="category">Category</label>
-        <select
-          name="category"
-          id="category"
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-        >
-          <option value="fruit">Fruit</option>
-          <option value="vegetable">Vegetable</option>
-          <option value="dairy">Dairy</option>
-        </select>
-        <button>submit</button>
-      </form>
-    </div>
+    <form onSubmit={updateProduct}>
+      <lable htmlFor="name">Product name:</lable>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        value={product}
+        placeholder="product name"
+        onChange={(e) => setProduct(e.target.value)}
+      />
+      <lable htmlFor="price">Unit price:</lable>
+      <input
+        type="number"
+        name="price"
+        id="name"
+        value={price}
+        placeholder="product price"
+        onChange={(e) => setPrice(e.target.value)}
+      />
+      <label htmlFor="category">Category</label>
+      <select
+        name="category"
+        id="category"
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
+      >
+        <option value="fruit">Fruit</option>
+        <option value="vegetable">Vegetable</option>
+        <option value="dairy">Dairy</option>
+      </select>
+      <button>submit</button>
+    </form>
   );
 };
 
