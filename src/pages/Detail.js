@@ -1,7 +1,7 @@
-import useFetch from "../useFetch";
+import useFetch from "../hooks/useFetch";
 import { useParams, Link } from "react-router-dom";
-import Axios, * as others from "axios";
 import { useHistory } from "react-router";
+import Axios, * as others from "axios";
 
 const Detail = () => {
   const { id } = useParams();

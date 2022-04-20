@@ -98,3 +98,21 @@ form button {
   font-family: "Fredericka the Great", cursive;
   margin: 0 5px 0 0;
 }
+
+.category-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding-left: 0;
+  padding-bottom: 20px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.category-list > li {
+  letter-spacing: 3px;
+}
+
+.category-list > li:hover {
+  transform: scale(1.2);
+}

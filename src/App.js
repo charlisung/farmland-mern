@@ -1,11 +1,12 @@
 import "./App.css";
-import List from "./Components/List";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Detail from "./Components/Detail";
-import New from "./Components/New";
-import Edit from "./Components/Edit";
-import NotFound from "./Components/NotFound";
-import Add from "./Components/Add";
+
+import List from "./pages/List";
+import Detail from "./pages/Detail";
+import New from "./pages/New";
+import Edit from "./pages/Edit";
+import NotFound from "./pages/NotFound";
+import Add from "./pages/Add";
 import Category from "./Components/Category";
 
 function App() {

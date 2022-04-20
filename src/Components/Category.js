@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import useFetch from "../useFetch";
+import useFetch from "../hooks/useFetch";
 
 export default function Category() {
   const { id } = useParams();
